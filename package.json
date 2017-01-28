@@ -1,0 +1,46 @@
+{
+    "name": "webpack-node-angular2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack --progress --watch",
+        "postinstall": "typings install",
+        "start": "npm start"
+    },
+    "engines": {
+        "node": ">=4.4.0",
+        "npm": ">=3.9.5"
+    },
+    "dependencies": {
+        "@angular/common": "~2.4.0",
+        "@angular/compiler": "~2.4.0",
+        "@angular/core": "~2.4.0",
+        "@angular/forms": "~2.4.0",
+        "@angular/http": "~2.4.0",
+        "@angular/platform-browser": "~2.4.0",
+        "@angular/platform-browser-dynamic": "~2.4.0",
+        "@angular/router": "~3.4.0",
+        "core-js": "^2.4.1",
+        "rxjs": "5.0.1",
+        "zone.js": "^0.7.4",
+        "reflect-metadata": "latest",
+        "express": "latest",
+        "ejs": "latest"
+    },
+    "author": "Dastagirireddy",
+    "license": "ISC",
+    "devDependencies": {
+        "clean-webpack-plugin": "^0.1.15",
+        "copy-webpack-plugin": "^4.0.1",
+        "css-loader": "^0.26.1",
+        "extract-text-webpack-plugin": "^1.0.1",
+        "node-sass": "^4.4.0",
+        "sass-loader": "^4.1.1",
+        "ts-loader": "^2.0.0",
+        "typings": "^2.1.0",
+        "webpack": "^1.14.0",
+        "typescript": "latest"
+    }
+}
