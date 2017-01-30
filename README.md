@@ -1,9 +1,9 @@
 # webpack-node-angular2
 
 ## Introduction
-This is a sample semi single page application combination of traditional and single page application.
-Before Login - Traditional application (Multi page)
-After Login - Single page application (SPA)
+This is a sample semi single page application combination of traditional and single page application.<br>
+Before Login - Traditional application (Multi page)<br>
+After Login - Single page application (SPA)<br>
 E.g: Gmail, Zopim,etc,.
 
 ## Why
