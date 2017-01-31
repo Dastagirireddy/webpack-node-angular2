@@ -6,6 +6,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: {
         "home": "./src/client/modules/home/index.js",
+        "login": "./src/client/modules/login/index.js",
         "dashboard": "./src/client/modules/dashboard/main.ts"
     },
     output: {
@@ -23,6 +24,18 @@ module.exports = {
         }, {
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract('css!sass')
+        }, {
+            test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+            loader: "url?limit=10000&mimetype=application/font-woff"
+        }, {
+            test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+            loader: "url?limit=10000&mimetype=application/octet-stream"
+        }, {
+            test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+            loader: "file"
+        }, {
+            test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+            loader: "url?limit=10000&mimetype=image/svg+xml"
         }]
     },
     plugins: [
@@ -38,6 +51,9 @@ module.exports = {
         new CopyWebpackPlugin([{
             from: './src/client/img',
             to: 'img'
+        }, {
+            from: './src/client/modules/dashboard/**/*.html',
+            to: 'partials/[name].html'
         }])
     ]
 };

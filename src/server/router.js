@@ -15,6 +15,9 @@ class Router {
         this.router.get('/dashboard', (req, res) => {
             res.render('dashboard');
         });
+        this.router.get('/login', (req, res) => {
+            res.render('login');
+        })
     }
 }
 
