@@ -1,6 +1,7 @@
 'use strict';
 
 let router = require('express').Router;
+let authMiddlerware = require('./utils/auth.middleware');
 
 class Router {
     constructor() {
@@ -9,15 +10,24 @@ class Router {
     }
 
     init() {
-        this.router.get('/', (req, res) => {
+        this.router.get('/', authMiddlerware, (req, res) => {
             res.render('index');
         });
-        this.router.get('/dashboard', (req, res) => {
+
+        this.router.get('/dashboard', authMiddlerware, (req, res) => {
             res.render('dashboard');
         });
-        this.router.get('/login', (req, res) => {
+
+        this.router.get('/login', authMiddlerware, (req, res) => {
             res.render('login');
-        })
+        });
+
+        this.router.get('/logout', authMiddlerware, (req, res) => {
+
+            req.session.destroy(function() {
+                res.redirect('/');
+            });
+        });
     }
 }
 
