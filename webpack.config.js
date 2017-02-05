@@ -55,8 +55,8 @@ module.exports = {
             from: './src/client/modules/dashboard/**/*.html',
             to: 'partials/[name].html'
         }, {
-            from: './src/client/vendor/',
-            to: 'vendor'
+            from: './src/client/libs/',
+            to: 'libs'
         }])
     ]
 };
